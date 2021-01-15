@@ -4,6 +4,7 @@ library(dplyr)
 library(stringr)
 library(data.table)
 library(plyr)
+library(R.utils)
 
 
 ##### LO QUE VIENE ACA SE CORRE UNA SOLA VEZ ANTES DE EMPEZAR EL SCRAPING####
@@ -28,23 +29,26 @@ remDr <- remoteDriver(remoteServerAddr = "localhost",
 
 #Defino la funcion de scraping
 
-concurrencia.lugar.por.dia <- function(lugar.a.buscar, dia.semana){
+concurrencia.lugar.por.dia <- function(lugar.a.buscar, dia.semana, tiempo.espera = 5){
   remDr$open() #abre firefox
   remDr$navigate("https://www.google.com.ar") #va a google.com.ar
   webElem <- remDr$findElement(using = "name", value = "q") #selecciona el recuadro de busqueda
   webElem$sendKeysToElement(list(paste(lugar.a.buscar, "horarios", dia.semana), "\uE007")) #escribe el lugar.a.buscar y hace la busqueda
   
   apertura <- NA_character_ #para empezar el loop que sigue
-  while(is.na(apertura)){ 
+  withTimeout(while(is.na(apertura)){ 
     source <- remDr$getPageSource()[[1]] #codigo de fuente de la pagina de google
     apertura <- ex_between(source, '"TLou0b JjSWRd">', '<')[[1]] #entre estos characteres, google dice si el lugar esta cerrado o abierto este dia, si esta cerrado se cierra firefox y se vuelve a empezar
-  }
-  if(apertura != "Cerrado"){
+  }, timeout = tiempo.espera, onTimeout = "silent")
+  if(is.na(apertura)){
+    remDr$close()
+    return("Sin datos de concurrencia")
+  } else if(apertura != "Cerrado"){
     concurrencia <- NA_character_ #para empezar el loop que sigue
-    while(is.na(concurrencia)){ 
+    withTimeout(while(is.na(concurrencia)){ 
       source <- remDr$getPageSource()[[1]] #codigo de fuente de la pagina de google
       concurrencia <- ex_between(source, 'class="cwiwob', 'px')[[1]] #extrae la cantidad de concurrencia en unidades de pixel que aparece en el grafico de concurrencia
-    } #este loop se repite hasta que la pagina cargue y se pueda extraer informacion, supongo que la cantidad de veces que se repite depende de la velocidad de internet
+    }, timeout = tiempo.espera, onTimeout = "silent") #este loop se repite hasta que la pagina cargue y se pueda extraer informacion, supongo que la cantidad de veces que se repite depende de la velocidad de internet
     remDr$close() #cierra firefox, ya no se necesita
     
     concurrencia <- as.numeric(sub(".*:", "", concurrencia)) #me quedo solo con la parte interesante del string
@@ -69,16 +73,33 @@ concurrencia.lugar.por.dia <- function(lugar.a.buscar, dia.semana){
     df$fecha.de.busqueda <- Sys.Date() #este lo agrego por las dudas, no se cuanto cambia segun el dia que se busca
     df <- df[,c(3, 4, 1, 2, 5)]
     df
-  } else{
+  }else{
     remDr$close()
   }
 }
 
-concurrencia.lugar <- function(lugar.a.buscar){
-  dias.semana <- c("lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo")
-  df <- ldply(lapply(dias.semana, FUN = concurrencia.lugar.por.dia, lugar.a.buscar = lugar.a.buscar), data.frame)
-  dir.create("CSVs Concurrencias", showWarnings = FALSE) #crea la carpeta concurrencia si no existe aun
-  write.csv(df, file = paste("CSVs Concurrencias/Concurrencia ", lugar.a.buscar, " ", Sys.Date(),".csv", sep = ""))
+concurrencia.lugar <- function(lugar.a.buscar, tiempo.espera = 5){
+  dias.semana <- c("martes", "miercoles", "jueves", "viernes", "sabado", "domingo")
+  df <- concurrencia.lugar.por.dia(lugar.a.buscar, "lunes", tiempo.espera)
+  if(!is.data.frame(df)){
+    if(length(df) == 0){
+      i <- TRUE
+    }else if(df == "Sin datos de concurrencia") {
+      i <- FALSE
+    }
+  }else{
+    i <- TRUE
+  }
+  for(dia.semana in dias.semana){
+    if(i){
+      datos <- concurrencia.lugar.por.dia(lugar.a.buscar, dia.semana, tiempo.espera)
+      df <- rbind(df, datos)
+    }
+  }
+  if(i){
+    dir.create("CSVs Concurrencias", showWarnings = FALSE) #crea la carpeta concurrencia si no existe aun
+    write.csv(df, file = paste("CSVs Concurrencias/Concurrencia ", lugar.a.buscar, " ", Sys.Date(),".csv", sep = ""))
+  }
   df
 }
  
