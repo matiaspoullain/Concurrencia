@@ -3,11 +3,11 @@ Title: Social gathering watch
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Matias",
-           family = "Poulin",
+           family = "Poullain",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "matias.poullain@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: A friendly and forward way for extracting information from Google's "Popular times", returning it as data frame and saving it in a .csv file.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
