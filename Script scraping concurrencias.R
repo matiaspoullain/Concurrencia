@@ -10,19 +10,7 @@ library(R.utils)
 ##### LO QUE VIENE ACA SE CORRE UNA SOLA VEZ ANTES DE EMPEZAR EL SCRAPING####
 # inicializa y conecta a un server
 
-#Es importante ver que esta primer linea de codigo funcione. Puede no hacerlo cuando hubo una actualizacion de los drivers o del firefox
-#de ser el caso que no funcione hay que cambiar el geckover (version del driver de firefox) por uno anterior, para ver las versiones instaladas correr:
-#binman::list_versions("geckodriver")
-#en mi caso funciona con la version 0.28.0
-#si se intento inicar el driver y dio error, correr este codigo, sino no se puede volver a crear el driver:
-#system("taskkill /im java.exe /f", intern=FALSE, ignore.stdout=FALSE) #quizas para linux sea diferente el codigo, normalmente con cerrar y abrir el rstudio se obtiene el mismo resultado
-
-driver<- rsDriver(browser = "firefox", geckover = "0.28.0")
-driver$client$close()
-remDr <- driver[["client"]]
-remDr <- remoteDriver(remoteServerAddr = "localhost", 
-                      port = 4567, 
-                      browserName = "firefox")
+source("Inicializacion.R")
 
 #########################################################################
 
@@ -78,7 +66,7 @@ concurrencia.lugar.por.dia <- function(lugar.a.buscar, dia.semana, tiempo.espera
   }
 }
 
-concurrencia.lugar <- function(lugar.a.buscar, tiempo.espera = 5){
+concurrencia.lugar <- function(lugar.a.buscar, tiempo.espera = 5, carpeta.guardado = "CSVs Concurrencias"){
   dias.semana <- c("martes", "miercoles", "jueves", "viernes", "sabado", "domingo")
   df <- concurrencia.lugar.por.dia(lugar.a.buscar, "lunes", tiempo.espera)
   if(!is.data.frame(df)){
@@ -97,8 +85,8 @@ concurrencia.lugar <- function(lugar.a.buscar, tiempo.espera = 5){
     }
   }
   if(i){
-    dir.create("CSVs Concurrencias", showWarnings = FALSE) #crea la carpeta concurrencia si no existe aun
-    write.csv(df, file = paste("CSVs Concurrencias/Concurrencia ", lugar.a.buscar, " ", Sys.Date(),".csv", sep = ""))
+    dir.create(carpeta.guardado, showWarnings = FALSE) #crea la carpeta concurrencia si no existe aun
+    write.csv(df, file = paste(carpeta.guardado, "/Concurrencia ", lugar.a.buscar, " ", Sys.Date(),".csv", sep = ""))
   }
   df
 }
