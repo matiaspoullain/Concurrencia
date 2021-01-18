@@ -14,8 +14,8 @@ driver.try <- function(){
   }
   
   driver$client$close()
-  remDr <- driver[["client"]]
-  remDr <- remoteDriver(remoteServerAddr = "localhost", 
+  remDr <<- driver[["client"]]
+  remDr <<- remoteDriver(remoteServerAddr = "localhost", 
                         port = 4567, 
                         browserName = "firefox")
 }

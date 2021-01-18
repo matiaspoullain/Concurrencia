@@ -18,8 +18,12 @@ sgat_day <- function(lugar.a.buscar, dia.semana, tiempo.espera = 5){
       source <- remDr$getPageSource()[[1]] #codigo de fuente de la pagina de google
       concurrencia <- ex_between(source, 'class="cwiwob', 'px')[[1]] #extrae la cantidad de concurrencia en unidades de pixel que aparece en el grafico de concurrencia
     }, timeout = tiempo.espera, onTimeout = "silent") #este loop se repite hasta que la pagina cargue y se pueda extraer informacion, supongo que la cantidad de veces que se repite depende de la velocidad de internet
+    coordenadas <- ex_between(source, 'data-url="/maps/place/', ',15z')
     remDr$close() #cierra firefox, ya no se necesita
     
+    coordenadas <- sub(".*@", "", coordenadas)
+    latitud <- sub(",.*", "", coordenadas)
+    longitud <- sub(".*,", "", coordenadas)
     concurrencia <- as.numeric(sub(".*:", "", concurrencia)) #me quedo solo con la parte interesante del string
     hora <- ex_between(source, 'data-hour=', ' jsaction')[[1]] #extrae la hora a la que corresponden las concurrencias
     hora <- as.numeric(gsub("[^0-9.-]", "", hora)) #me quedo solo con la parte interesante del string
@@ -40,7 +44,9 @@ sgat_day <- function(lugar.a.buscar, dia.semana, tiempo.espera = 5){
     df$lugar <- lugar.a.buscar 
     df$dia <- dia.semana 
     df$fecha.de.busqueda <- Sys.Date() #este lo agrego por las dudas, no se cuanto cambia segun el dia que se busca
-    df <- df[,c(3, 4, 1, 2, 5)]
+    df$latitud <- as.numeric(latitud)
+    df$longitud <- as.numeric(longitud)
+    df <- df[,c(3, 4, 1, 2, 6, 7, 5)]
     df
   }else{
     remDr$close()
