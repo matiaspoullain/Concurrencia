@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "matias.poullain@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: A friendly and forward way for extracting information from Google's "Popular times", returning it as data frame and saving it in a .csv file.
+Description: A friendly and forward way for extracting information from Google's "Popular times", returning it as dataframes and saving it as .csv files.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
