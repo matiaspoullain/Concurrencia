@@ -1,4 +1,5 @@
 source("Script scraping concurrencias.R")
+source("Restaurantes Ushuaia.R")
 
 #Ejemplos:
 
@@ -6,6 +7,7 @@ sarkis <- concurrencia.lugar("sarkis")
 
 museo <- concurrencia.lugar("museo nacional de bellas artes")
 
+cervelar <- concurrencia.lugar("cervelar belgrano")
 
 #para hacerlo con varios lugares al mismo tiempo:
 lugares <- c("anses villa urquiza", "sportclub cabildo", "parroquia san patricio", "freddo cabildo 1700")
@@ -41,3 +43,15 @@ andino <- concurrencia.lugar("andino gourmet ushuaia")
 taberna <- concurrencia.lugar("taberna del viejo lobo ushuaia")
 viagro <- concurrencia.lugar("viagro ushuaia")
 
+
+
+#con ushuaia_restaurantes:
+restaurantes <- ushuaia_restaurants()
+
+
+info.restaurantes <- lapply(restaurantes[3:length(restaurantes)], concurrencia.lugar)
+
+for(resta in restaurantes[which(restaurantes == va.por):length(restaurantes)]){
+  concurrencia.lugar(resta)
+  va.por <- resta
+}
