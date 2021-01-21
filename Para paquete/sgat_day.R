@@ -1,23 +1,19 @@
-sgat_day <- function(lugar.a.buscar, dia.semana, tiempo.espera = 5){
+sgat_day <- function(lugar.a.buscar, dia.semana, tiempo.espera = 10){
   remDr$open() #abre firefox
   remDr$navigate("https://www.google.com.ar") #va a google.com.ar
   webElem <- remDr$findElement(using = "name", value = "q") #selecciona el recuadro de busqueda
   webElem$sendKeysToElement(list(paste(lugar.a.buscar, "horarios", dia.semana), "\uE007")) #escribe el lugar.a.buscar y hace la busqueda
   
   apertura <- NA_character_ #para empezar el loop que sigue
-  try(withTimeout(while(is.na(apertura)){ 
+  concurrencia <- NA_character_ #para empezar el loop que sigue
+  x <- 0
+  while(x <= tiempo.espera & replace(apertura, is.na(apertura), "0") != "Cerrado" & is.na(concurrencia)){  
     source <- remDr$getPageSource()[[1]] #codigo de fuente de la pagina de google
     apertura <- ex_between(source, '"TLou0b JjSWRd">', '<')[[1]] #entre estos characteres, google dice si el lugar esta cerrado o abierto este dia, si esta cerrado se cierra firefox y se vuelve a empezar
-  }, timeout = tiempo.espera, onTimeout = "silent"), silent = TRUE)
-  if(is.na(apertura)){
-    remDr$close()
-    return("Sin datos de concurrencia")
-  } else if(!("Cerrado" %in% apertura)){
-    concurrencia <- NA_character_ #para empezar el loop que sigue
-    try(withTimeout(while(is.na(concurrencia)){ 
-      source <- remDr$getPageSource()[[1]] #codigo de fuente de la pagina de google
-      concurrencia <- ex_between(source, 'class="cwiwob', 'px')[[1]] #extrae la cantidad de concurrencia en unidades de pixel que aparece en el grafico de concurrencia
-    }, timeout = tiempo.espera, onTimeout = "silent"), silent = TRUE) #este loop se repite hasta que la pagina cargue y se pueda extraer informacion, supongo que la cantidad de veces que se repite depende de la velocidad de internet
+    concurrencia <- ex_between(source, 'class="cwiwob', 'px')[[1]] #extrae la cantidad de concurrencia en unidades de pixel que aparece en el grafico de concurrencia
+    x <- x + 1
+  }
+  if(!("Cerrado" %in% replace(apertura, is.na(apertura), "0"))){
     if(!is.na(concurrencia)){
       coordenadas <- ex_between(source, 'data-url="/maps/place/', ',15z')
       remDr$close() #cierra firefox, ya no se necesita

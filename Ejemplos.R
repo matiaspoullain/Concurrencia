@@ -49,9 +49,12 @@ viagro <- concurrencia.lugar("viagro ushuaia")
 restaurantes <- ushuaia_restaurants()
 
 
-info.restaurantes <- lapply(restaurantes[3:length(restaurantes)], concurrencia.lugar)
+info.restaurantes <- lapply(restaurantes, concurrencia.lugar, carpeta.guardado = "CSVs Concurrencias/Restaurantes")
 
+va.por <- restaurantes[67]
 for(resta in restaurantes[which(restaurantes == va.por):length(restaurantes)]){
-  concurrencia.lugar(resta)
+  concurrencia.lugar(resta, carpeta.guardado = "CSVs Concurrencias/Restaurantes", tiempo.espera = 7)
   va.por <- resta
 }
+
+which(restaurantes == va.por)
