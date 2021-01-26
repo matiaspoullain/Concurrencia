@@ -5,8 +5,8 @@ account: matiaspoullain
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3525907
-bundleId: 4145888
+bundleId: 4145939
 url: https://matiaspoullain.shinyapps.io/Concurrencias_Ushuaia/
-when: 1611681421.04057
+when: 1611682070.46713
 asMultiple: FALSE
 asStatic: FALSE
