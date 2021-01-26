@@ -125,4 +125,8 @@ for(dia in dias.semana){
   }
 }
 
-lista.imagenes <- list.files("Graficos iniciales/Mapas animacion")
+lista.imagenes <- list.files("Graficos iniciales/Mapas animacion", full.names = T)
+
+library(gifski)
+gifski(lista.imagenes, 'Graficos iniciales/Video completo.gif', delay = 1/6, width = 750, height = 750)
+
