@@ -32,7 +32,11 @@ boxplt2 <- ggplot(concurrencias, aes(x = dia, y = concurrencia, group = dia)) +
 
 ggsave("Graficos iniciales/Boxplot Uhsuaia 2.jpg", plot = boxplt2, device="jpg",dpi=300 , width = 20, height = 10)
 
+frecuencias <- ggplot(concurrencias[concurrencias$concurrencia != 0,], aes(x = hora)) +
+  geom_bar() +
+  facet_wrap(~dia)
 
+ggsave("Graficos iniciales/Frecuencias horarios.jpg", plot = frecuencias, device="jpg",dpi=300 , width = 20, height = 10)
 
 
 #Mapa:
