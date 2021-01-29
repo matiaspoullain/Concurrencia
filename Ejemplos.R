@@ -1,5 +1,6 @@
 source("Script scraping concurrencias.R")
 source("Restaurantes Ushuaia.R")
+source("Restaurantes tripadvisor.R")
 
 #Ejemplos:
 
@@ -58,3 +59,56 @@ for(resta in restaurantes[which(restaurantes == va.por):length(restaurantes)]){
 }
 
 which(restaurantes == va.por)
+
+
+
+#con restaurantes de tripadvisor:
+
+rest.pinamar <- restaurantes_general("Pinamar, argentina")
+
+restaurantes_general("san carlos de bariloche, Argentina", 65)
+
+restaurantes_general("gualeguaychu, entre rios, argentina", 10)
+
+
+
+rest.pinamar <- paste(rest.pinamar, ", Pinamar, Argentina", sep = "")
+
+va.por <- rest.pinamar[5]
+salieron.mal <- c()
+
+
+
+
+for(resta in rest.pinamar[which(rest.pinamar == va.por):length(rest.pinamar)]){
+  print(paste("Va por ", which(rest.pinamar == va.por), " de ", length(rest.pinamar), ": ", which(rest.pinamar == va.por)/length(rest.pinamar), sep = "" ))
+  concurrencia.pinamar <- 1
+  class(concurrencia.pinamar) <- "try-error"
+  intento <- 1
+  while(class(concurrencia.pinamar) == "try-error" & intento <= 5){
+    concurrencia.pinamar <- try(sgat(resta, carpeta.guardado = "CSVs Concurrencias/restaurantes pinamar", tiempo.espera = 15), silent = TRUE)
+    intento <- intento + 1
+  }
+  if(class(concurrencia.pinamar) == "try-error"){
+    salieron.mal <- c(salieron.mal, resta)
+  }
+  va.por <- resta
+
+}
+
+
+for(resta in salieron.mal){
+  print(paste("Va por ", which(salieron.mal == resta), " de ", length(salieron.mal), ": ", round(100*which(salieron.mal == resta)/length(salieron.mal),2), sep = "" ))
+  concurrencia.pinamar <- 1
+  class(concurrencia.pinamar) <- "try-error"
+  intento <- 1
+  while(class(concurrencia.pinamar) == "try-error" & intento <= 5){
+    concurrencia.pinamar <- try(sgat(resta, carpeta.guardado = "CSVs Concurrencias/restaurantes pinamar", tiempo.espera = 15), silent = TRUE)
+    intento <- intento + 1
+  }
+  if(class(concurrencia.pinamar) == "try-error"){
+    salieron.mal <- c(salieron.mal, resta)
+  }
+  va.por <- resta
+  
+}

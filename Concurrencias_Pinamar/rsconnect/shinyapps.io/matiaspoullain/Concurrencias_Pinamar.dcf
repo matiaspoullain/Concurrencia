@@ -1,0 +1,12 @@
+name: Concurrencias_Pinamar
+title: Concurrencias_Pinamar
+username:
+account: matiaspoullain
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3549390
+bundleId: 4159300
+url: https://matiaspoullain.shinyapps.io/Concurrencias_Pinamar/
+when: 1611961881.66789
+asMultiple: FALSE
+asStatic: FALSE

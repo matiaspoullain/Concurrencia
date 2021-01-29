@@ -2,16 +2,18 @@
 library(dplyr)
 library(ggplot2)
 
-archivos <- list.files("CSVs Concurrencias/Restaurantes")
+archivos <- list.files("CSVs Concurrencias/restaurantes pinamar")
 
 concurrencias <- data.frame()
 for(i in archivos){
-  concurrencia <- read.csv(paste("CSVs Concurrencias/Restaurantes/", i, sep = ""))
+  concurrencia <- read.csv(paste("CSVs Concurrencias/restaurantes pinamar/", i, sep = ""))
   concurrencias <- rbind(concurrencias, concurrencia)
 }
 
+write.csv(concurrencias, "Concurrencias_Pinamar/Concurrencias.csv", row.names = FALSE, fileEncoding = "UTF-8")
+
 concurrencias
-dim(concurrencias)
+dim(unique(concurrencias))
 length(archivos)
 length(unique(interaction(concurrencias$latitud, concurrencias$longitud)))
 
@@ -122,15 +124,15 @@ for(dia in dias.semana){
       tm_layout(main.title= paste(dia, x, "hs", sep = " "), 
                 title.position = c('left', 'top'),
                 main.title.size = 0.4)
-    tmap_save(mapa.animacion, filename = paste("Graficos iniciales/Mapas animacion/Mapa_", formatC(y, width=3, flag="0"), ".png", sep = ""), width = 750, height = 750)#https://stackoverflow.com/questions/42086603/producing-an-inset-map-with-the-tmap-package-in-r
+    tmap_save(mapa.animacion, filename = paste("Graficos iniciales/Mapas animacion Pinamar/Mapa_", formatC(y, width=3, flag="0"), ".png", sep = ""), width = 750, height = 750)#https://stackoverflow.com/questions/42086603/producing-an-inset-map-with-the-tmap-package-in-r
     x <- x + 1
     y <- y + 1
     print(paste("Va por ", dia, " ", x, "hs: ", round(100 * (y-1) / (7*24), 2), "%", sep = ""))
   }
 }
 
-lista.imagenes <- list.files("Graficos iniciales/Mapas animacion", full.names = T)
+lista.imagenes <- list.files("Graficos iniciales/Mapas animacion Pinamar", full.names = T)
 
 library(gifski)
-gifski(lista.imagenes, 'Graficos iniciales/Video completo.gif', delay = 1/6, width = 750, height = 750)
+gifski(lista.imagenes, 'Graficos iniciales/Video completo Pinamar.gif', delay = 1/6, width = 750, height = 750)
 
