@@ -1,0 +1,145 @@
+"","X","Nombre.de.la.plaza.o.plazoleta","Calles.que.la.limitan","Barrio.s.donde.se.encuentra"
+"1",2,"Plaza 1 de marzo de 1948","Valdenegro, Pasaje Flor del Aire, Calle Galván y Pasaje Quebracho","Saavedra"
+"2",3,"Plaza 24 de Septiembre","Coronel Apolinario Figueroa, Gral. M. A. Rodríguez, Rojas y Antezama.","Villa Crespo"
+"3",4,"Plaza 25 de Agosto","Calles 14 de julio, Charlone, Heredia y Giribone","Villa Ortúzar"
+"4",5,"Plaza 25 de Mayo",NA,NA
+"5",6,"Plaza Alberdi","Calles Machain, Nuñez, Mariano Acha y la Avenida Crisólogo Larralde.","Saavedra"
+"6",7,"Plaza Leandro N. Alem","Calles Artigas, Cochrane, Larsen y Zamudio.","Villa Pueyrredón"
+"7",8,"Plaza Alemania","Av. del Libertador, Cavia, Castex, Casares","Palermo"
+"8",9,"Plaza Almagro","Calles Sarmiento, Juan Domingo Perón, Jerónimo Salguero y Bulnes","Almagro"
+"9",10,"Plaza de los Viveros","Avenida Coronel Roca, Ferré, Timoteo Gordillo y Lisandro de la Torre","Villa Riachuelo"
+"10",11,"Plaza Antonio Malaver",NA,"Villa Ortúzar"
+"11",12,"Plaza Arenales","Calles Nueva York, Bahía Blanca, Pareja, Mercedes","Villa Devoto"
+"12",13,"Plaza Aristóbulo del Valle","Calles Campana, Baigorria, Cuenca y Marco Sastre","Villa del Parque"
+"13",14,"Plaza Balcarce","Vuelta de Obligado, Manzanares, Jaramillo y Avenida Cabildo","Núñez"
+"14",15,"Plaza Barrancas de Belgrano","Avenida Juramento, Avenida Virrey Vertiz, La Pampa, 11 de Septiembre, Zavalía","Belgrano"
+"15",16,"Plaza Benjamín Vicuña Mackenna",NA,"Saavedra"
+"16",17,"Plaza Brigadier Zapiola","Calle Echeverría, Avenida Juramento, Calle Mariano Acha, Calle Donado","Belgrano"
+"17",18,"Plaza Armenia",NA,"Palermo"
+"18",19,"Plaza Canadá","Av. Dr. Martínez Zubiría, Calle San Martín, Av. Antártida Argentina, Av. Ramos Mejía.","Retiro"
+"19",20,"Plaza Castelli","Calle Juramento, Calle Conde, Calle Echeverría y vías del Ferrocarril General Bartolomé Mitre","Belgrano"
+"20",21,"Plaza de los Olmos","Calle Zapiola, Calle Echeverría y vías del Ferrocarril General Bartolomé Mitre","Belgrano"
+"21",22,"Plaza Cataluña",NA,"Recoleta"
+"22",23,"Plaza Che Guevara","Cnel. Ramón L. Falcón, Laguna y Rafaela","Vélez Sarsfield"
+"23",24,"Plaza República de Chile","Calle Tagle, Avenida del Libertador, Calle Mariscal Ramón Castilla y línea de edificación sobre la Avenida Presidente Figueroa Alcorta","Palermo"
+"24",25,"Plaza Ciudad de Banff","Calles Arregui, Roma, Lascano, Lisboa","Versailles"
+"25",26,"Plaza Ciudad de Udine",NA,"Floresta"
+"26",27,"Plaza Colpayo",NA,"Caballito"
+"27",28,"Plaza Comandante A. Guacurari Artigas",NA,NA
+"28",29,"Plaza Colombia",NA,"Barracas"
+"29",30,"Plaza Dante","Avenida Figueroa Alcorta, Avenida Pueyrredón y Avenida del Libertador","Recoleta"
+"30",31,"Plaza Monseñor De Andrea","Av. Córdoba, T.M.de Anchorena, Paraguay y Jean Jaures","Balvanera"
+"31",32,"Plaza de la Asunción",NA,"Villa General Mitre"
+"32",33,"Plaza de la Constitución","Calles Lima Este, Avenida Juan de Garay, Lima Oeste, Constitución","Constitución"
+"33",34,"Plaza de la Misericordia","Avenida Directorio, calles Lautaro, Francisco Bilbao y Camacuá.","Flores"
+"34",35,"Plaza de la República","Av Corrientes y 9 de Julio","San Nicolás"
+"35",36,"Plaza de las Naciones Unidas",NA,"Recoleta"
+"36",37,"Plaza de los Mataderos",NA,"Mataderos"
+"37",38,"Plaza de los Periodistas",NA,"Flores"
+"38",39,"Plaza de Mayo","Avenida Rivadavia, Bolívar, Hipólito Yrigoyen, Balcarce","Monserrat"
+"39",40,"Plaza del Ángel Gris","Avenida Avellaneda, Avenida Tte. Gral. Donato Álvarez, Calle Bogotá, Calle Cálcena","Flores"
+"40",41,"Plaza del Congreso","Avenida Rivadavia, Avenida Entre Ríos, Hiólito Yrigoyen, Solís","Monserrat"
+"41",42,"Plaza del Correo","Av.L.N.Alem, Sarmiento, Cnel.Rosales y Peron","San Nicolás"
+"42",43,"Plaza Don Bosco",NA,"Monte Castro"
+"43",44,"Plaza Dorrego","Defensa, Humberto I, A.Aieta y Bethlem","San Telmo"
+"44",45,"Plaza Echeverría","Bauness, Nahuel Huapi, Capdevila y Pedro Ignacio Rivera","Villa Urquiza"
+"45",46,"Plaza El Maestro","Calles Coronel Ramón Lista, Avenida Francisco Beiró y Pedro Calderón de la Barca","Villa Devoto"
+"46",47,"Plaza Embajada de Israel","Suipacha y Arroyo","Retiro"
+"47",48,"Plaza Enrique Santos Discépolo","Calle Azucena Butteler","Parque Chacabuco"
+"48",49,"Plaza Eva Perón",NA,"Recoleta"
+"49",50,"Plaza Éxodo Jujeño","Liverpool, Dublín, Gándara y Bauness","Parque Chas"
+"50",51,"Plaza Ramón L. Falcón","Ramón L. Falcón, Dip. O. Benedetti y Pasaje Particular","Vélez Sarsfield"
+"51",52,"Plaza Falucho","Fitz Roy, Santa Fe y Luis María Campos","Palermo"
+"52",53,"Plaza Félix Lima","Calle Arias, calle Arcos, Avenida Ramallo y Calle Cuba.","Núñez"
+"53",54,"Plaza Francia",NA,"Recoleta"
+"54",55,"Plaza Fray Luis Beltrán",NA,"Barracas"
+"55",56,"Plaza Fuerza Aérea Argentina","Av.Libertador, J.M.Ramos Mejia, G.Gilardi y San Martin","Retiro"
+"56",57,"Plaza Garay","Av.Garay, Solis, Pavon y Luis Saenz Peña","Constitución"
+"57",58,"Plaza Garrigós",NA,NA
+"58",59,"Plaza General Pueyrredón","Av.Rivadavia, Artigas, Yerbal y Fray C.Rodriguez","Flores"
+"59",60,"Plaza General San Martín","Avenida Del Libertador, Maipú, Arenales, Esmeralda, Avenida Santa Fe, Florida","Retiro"
+"60",61,"Plaza Giordano Bruno","Calles Parral, Giordano Bruno, Rojas y vías del ferrocarril Sarmiento.","Caballito"
+"61",62,"Plaza Nicolás Granada","Dellepiane, Murguiondo, Zelarrayán y Oliden","Villa Lugano"
+"62",63,"Plaza Guatemala",NA,NA
+"63",64,"Plaza Güemes","Medrano, Charcas, Salguero y Mansilla","Palermo"
+"64",65,"Plaza Holanda",NA,NA
+"65",66,"Plaza Houssay","Avenida Córdoba y las calles Junín, Paraguay y Presidente José E. Uriburu","Recoleta"
+"66",67,"Plaza Hungría","Calles Holmberg, Arias, Ramallo y Avenida Roberto Goyeneche.","Saavedra"
+"67",68,"Plaza Intendente Alvear",NA,"Recoleta"
+"68",69,"Plaza Inmigrantes de Armenia",NA,"Palermo"
+"69",70,"Plaza Irlanda","Avenida Gaona, Donato Álvarez, Neuquén y Seguí","Caballito"
+"70",71,"Plaza Italia","Avenida Satna Fe, Calzada circular de Plaza Italia","Palermo"
+"71",72,"Plaza Jamaica","Calle Burela, Calle Moscú y Calle Estocolmo",NA
+"72",73,"Plaza J.J. Paso","Moldes y Virrey Olaguer y Feliu",NA
+"73",74,"Plaza José María Sobral",NA,NA
+"74",75,"Plaza Julio de Caro",NA,NA
+"75",76,"Plaza Justo",NA,NA
+"76",77,"Parque Las Heras","Avenida General Las Heras, Avenida Coronel Díaz, Juncal, Jerónimo Salguero","Palermo"
+"77",78,"Plaza Lavalle","Lavalle, Libertad, Av.Córdoba y Talcahuano","San Nicolás"
+"78",79,"Plaza Libertad","Libertad, M.T.de Alvear, Cerrito y Paraguay","Retiro"
+"79",80,"Plaza Libres del Sur",NA,NA
+"80",81,"Plaza Lorea","Luis Saenz Peña y Rivadavia","Monserrat"
+"81",82,"Plaza Los Derechos del Hombre",NA,NA
+"82",83,"Plaza Mafalda","Conde, C.Arenal, Gral.E.Martinez y S. Dumont",NA
+"83",84,"Plaza Manuel Belgrano","Juramento, Cuba, Echeverria y V.de Obligado","Belgrano"
+"84",85,"Plaza Marcos Sastre","Monroe entre Miller y Valdenegro","Villa Urquiza"
+"85",86,"Plaza María Eva Duarte de Perón",NA,"Puerto Madero"
+"86",87,"Plaza Mariano Moreno","Luis Saenz Peña e Hipólito Yrigoyen","Monserrat"
+"87",88,"Plaza Martín de Pueyrredón",NA,NA
+"88",89,"Plaza Sudamérica","Avenida General Francisco Fernández de la Cruz, Itaquí y Avenida Piedrabuena","Villa Riachuelo"
+"89",90,"Plaza Martín Fierro","La Rioja, Barcala, General Urquiza y Autopista 25 de Mayo","San Cristóbal"
+"90",91,"Plaza Mataderos",NA,NA
+"91",92,"Plaza Matheu","Magallanes, Irala, Gral G.Araoz de Lamadrid y Hernandarias",NA
+"92",93,"Plaza Miserere","Avenida Rivadavia, Ecuador, Bartolomé Mitre, Avenida Pueyrredón","Balvanera"
+"93",94,"Plaza Misericordia",NA,NA
+"94",95,"Plaza Mitre",NA,NA
+"95",96,"Plaza Benito Nazar","Calles Apolinario Figueroa, Calle Valentín Virasoro, Calle Olaya y Calle Antezana","Villa Crespo"
+"96",97,"Plaza Noruega","Calle Mendoza, Calle Amenábar, Calle Ciudad de la Paz y Avenida Juramento","Belgrano"
+"97",98,"Plaza Nueva Pompeya","Calle Traful y Avenida Sáenz","Nueva Pompeya"
+"98",99,"Plaza Portugal",NA,NA
+"99",100,"Plaza Primero de Mayo",NA,"Balvanera"
+"100",101,"Plaza Pueyrredón",NA,NA
+"101",102,"Plaza Ramón G. Fernández",NA,NA
+"102",103,"Plaza Reina de Holanda",NA,NA
+"103",104,"Plaza República de Bolivia",NA,NA
+"104",105,"Plaza República de Chile",NA,"Palermo"
+"105",106,"Plaza República de México",NA,NA
+"106",107,"Plaza República del Perú","Calles Salguero, M. Coronado, San Martín de Tours y Avenida Figueroa Alcorta","Palermo"
+"107",108,"Plaza República Federativa del Brasil","Calles Julio Víctor González, Eduardo J. Couture, Francisco Romero y Avenida Figueroa Alcorta","Recoleta"
+"108",109,"Plaza República Oriental del Uruguay","Calles Tagle, Avenida Figueroa Alcorta, Austria y Avenida del Libertador","Recoleta"
+"109",110,"Plaza Ricchieri","Calles Quevedo, Avenida Francisco Beiró, Desaguadero y José Pedro Varela","Villa Devoto"
+"110",111,"Plaza Rodríguez Peña",NA,NA
+"111",112,"Plaza Roma",NA,NA
+"112",113,"Plaza Roque Sáenz Peña",NA,NA
+"113",114,"Plaza Rubén Dario","Calles Austria, Avenida Figueroa Alcorta, Avenida Pueyrredón y Avenida del Libertador","Recoleta"
+"114",115,"Plaza Salaberry",NA,NA
+"115",116,"Plaza San Martín de Tours",NA,"Recoleta"
+"116",117,"Plaza Santojanni",NA,NA
+"117",118,"Plaza Solís","Calles Suárez, Caboto, Ministro Brin y Olavarría","La Boca"
+"118",119,"Plaza Sudamérica",NA,NA
+"119",120,"Plaza Teniente General Emilio Mitre",NA,NA
+"120",121,"Plaza Teniente Pomar",NA,NA
+"121",122,"Plaza Terán","Calles Nogoyá, Juan Esteban Martñinez, Melincué, Coronel José O. Gordillo","Villa Real"
+"122",123,"Plaza Túpac Amaru","Bajo la Autopista 25 de Mayo, en su paso sobre las Avenidas Lafuente y Eva Perón","Flores"
+"123",124,"Plaza Unidad Nacional","Delfín Gallo, Murguiondo, Cafayate y las vías en Villa Lugano - Sede Comunal Nº 8.","Villa Lugano"
+"124",125,"Plaza Unión Latinoamericana",NA,NA
+"125",126,"Plaza Vélez Sársfield","Avenida Avellaneda, Calle Bogotá, Calle Chivilcoy, Calle Bahía Blanca","Floresta"
+"126",127,"Plaza Venezuela",NA,NA
+"127",128,"Plaza Vicente López",NA,NA
+"128",129,"Plaza Yrigoyen",NA,NA
+"129",130,"Plaza Zapiola",NA,NA
+"130",131,"Plazoleta Cid Campeador",NA,NA
+"131",132,"Plaza Serrano","Calles Honduras y Jorge Luis Borges.","Palermo"
+"132",133,"Plazoleta Crisólogo Larralde",NA,NA
+"133",134,"Plazoleta César Iglesias Paz","Calles Gerónimo Salguero y Seguí.","Palermo"
+"134",135,"Plazoleta José A. Paez",NA,NA
+"135",136,"Plazoleta Mazza",NA,NA
+"136",137,"Plazoleta Quino",NA,NA
+"137",138,"Plazoleta San Miguel de Caricoits",NA,NA
+"138",139,"Plazoleta San Martín de Tours",NA,NA
+"139",140,"Plazoleta Virreinato del Río de la Plata",NA,NA
+"140",141,"Plaza Las Toscaneras",NA,"Villa Real"
+"141",142,"La placita de los niños",NA,"Flores"
+"142",143,"Plaza Kevin",NA,"Barracas"
+"143",144,"Plaza Triángulo","Avenida Osvaldo Cruz y Monteagudo","Villa Lugano"
+"144",145,"Plazoleta Yugoslavia",NA,NA
