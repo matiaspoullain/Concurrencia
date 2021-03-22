@@ -40,6 +40,6 @@ write.csv(df.salieron.mal, "Concurrencias_CABA/parques salieron mal.csv")
 git2r::config(user.name = "matiaspoullain", user.email = "matias.poullain")
 git2r::status()
 git2r::add(repo = ".", path = getwd(), force = FALSE)
-git2r::commit(repo = ".", message = "prueba2", all = TRUE)
+git2r::commit(repo = ".", message = "cambios chicos", all = TRUE)
 shell("git push")
 
