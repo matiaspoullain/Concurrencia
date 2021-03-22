@@ -33,8 +33,10 @@ for(resta in parques[which(parques == va.por):length(parques)]){
   va.por <- resta
 
 }
+
 git2r::config(user.name = "matiaspoullain", user.email = "matias.poullain")
 git2r::status()
 git2r::add(repo = ".", path = getwd(), force = FALSE)
-git2r::commit(repo = ".", message = "subida de datos de parques")
+git2r::commit(repo = ".", message = "prueba2", all = TRUE)
 shell("git push")
+
