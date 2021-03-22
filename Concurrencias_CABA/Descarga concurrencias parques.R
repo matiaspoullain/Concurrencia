@@ -1,6 +1,5 @@
 #Descarga concurrencias parques CABA:
 library(git2r)
-library(drat)
 parques <- read.csv("Nombres parques CABA.csv", encoding = "UTF-8")
 
 parques <- paste(parques$Nombre.de.la.plaza.o.plazoleta, ", Ciudad de Buenos Aires", sep = "")
@@ -33,6 +32,10 @@ for(resta in parques[which(parques == va.por):length(parques)]){
   va.por <- resta
 
 }
+
+num <- 1:length(salieron.mal)
+df.salieron.mal <- data.frame(num, salieron.mal)
+write.csv(df.salieron.mal, "Concurrencias_CABA/parques salieron mal.csv")
 
 git2r::config(user.name = "matiaspoullain", user.email = "matias.poullain")
 git2r::status()
