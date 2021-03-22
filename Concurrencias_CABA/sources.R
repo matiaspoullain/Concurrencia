@@ -1,7 +1,7 @@
 #Sources
 #Parques
-source("Descarga concurrencias parques.R")
+source("Concurrencias_CABA/Descarga concurrencias parques.R")
 
 
 #Bares
-source("Descarga concurrencias bares.R")
+source("Concurrencias_CABA/Descarga concurrencias bares.R")
