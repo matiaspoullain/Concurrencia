@@ -1,6 +1,6 @@
 #Descarga concurrencias parques CABA:
 library(git2r)
-parques <- read.csv("Nombres parques CABA.csv", encoding = "UTF-8")
+parques <- read.csv("Concurrencia/Nombres parques CABA.csv", encoding = "UTF-8")
 
 parques <- paste(parques$Nombre.de.la.plaza.o.plazoleta, ", Ciudad de Buenos Aires", sep = "")
 
