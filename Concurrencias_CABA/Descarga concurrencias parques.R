@@ -19,7 +19,7 @@ initialization_sgat()
     concurrencia.parques.caba <- 1
     class(concurrencia.parques.caba) <- "try-error"
     intento <- 1
-    while(class(concurrencia.parques.caba) == "try-error" & intento <= 20){
+    while(class(concurrencia.parques.caba) == "try-error" & intento <= 50){
       concurrencia.parques.caba <- try(sgat(resta, carpeta.guardado = "CSVs Concurrencias/Parques CABA", tiempo.espera = 15), silent = TRUE)
       intento <- intento + 1
       repeticiones <- repeticiones + 1
