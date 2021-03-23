@@ -4,6 +4,8 @@ parques <- read.csv("Concurrencias_CABA/Nombres parques CABA.csv", encoding = "U
 
 parques <- paste(parques$Nombre.de.la.plaza.o.plazoleta, ", Ciudad de Buenos Aires", sep = "")
 
+salieron.mal <- read.csv("Concurrencias_CABA/parques salieron mal.csv")
+salieron.mal <- salieron.mal$salieron.mal
 library(sgat)
 initialization_sgat()
 
@@ -40,6 +42,6 @@ write.csv(df.salieron.mal, "Concurrencias_CABA/parques salieron mal.csv")
 git2r::config(user.name = "matiaspoullain", user.email = "matias.poullain")
 git2r::status()
 git2r::add(repo = ".", path = getwd(), force = FALSE)
-git2r::commit(repo = ".", message = "cambios chicos", all = TRUE)
+git2r::commit(repo = ".", message = "datos parques", all = TRUE)
 shell("git push")
 
