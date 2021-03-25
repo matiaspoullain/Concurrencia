@@ -36,9 +36,6 @@ for(resta in bares){
   }
 }
 
-num <- 1:length(salieron.mal)
-df.salieron.mal <- data.frame(num, salieron.mal)
-
 git2r::config(user.name = "matiaspoullain", user.email = "matias.poullain")
 git2r::status()
 git2r::add(repo = ".", path = getwd(), force = FALSE)
