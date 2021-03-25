@@ -14,13 +14,13 @@ initialization_sgat()
   salieron.mal <- c()
   repeticiones <- 0
 
-  for(resta in parques[which(parques == va.por):length(parques)]){
-    print(paste("Va por ", which(parques == va.por), " de ", length(parques), ": ", 100* which(parques == va.por)/length(parques), " %", sep = "" ))
+  for(resta in parques){
+    print(paste("Va por ", which(parques == resta), " de ", length(parques), ": ", 100* which(parques == resta)/length(parques), " %", sep = "" ))
     concurrencia.parques.caba <- 1
     class(concurrencia.parques.caba) <- "try-error"
     intento <- 1
     while(class(concurrencia.parques.caba) == "try-error" & intento <= 50){
-      concurrencia.parques.caba <- try(sgat(resta, carpeta.guardado = "CSVs Concurrencias/Parques CABA", tiempo.espera = 15), silent = TRUE)
+      concurrencia.parques.caba <- try(sgat(resta, carpeta.guardado = "CSVs Concurrencias/Parques CABA nuevo sgat", tiempo.espera = 15), silent = TRUE)
       intento <- intento + 1
       repeticiones <- repeticiones + 1
     }
