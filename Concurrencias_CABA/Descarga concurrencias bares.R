@@ -28,7 +28,7 @@ for(resta in bares){
   }
   if(class(concurrencia.bares.caba) == "try-error"){
     salieron.mal <- c(salieron.mal, resta)
-    write.csv(df.salieron.mal, "Concurrencias_CABA/bares salieron mal.csv")
+    write.csv(salieron.mal, "Concurrencias_CABA/bares salieron mal.csv")
   }
   if(repeticiones >= 100){
     Sys.sleep(300)
