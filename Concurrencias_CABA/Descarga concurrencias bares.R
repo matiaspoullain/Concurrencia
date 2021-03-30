@@ -6,6 +6,7 @@ bares <- paste(bares$caba, ", Ciudad de Buenos Aires", sep = "")
 
 #salieron.mal <- read.csv("Concurrencias_CABA/bares salieron mal.csv")
 #salieron.mal <- salieron.mal$salieron.mal
+ya.hizo <- read.csv("Concurrencias_CABA/Bares que ya inicio.csv")
 library(sgat)
 initialization_sgat()
 
