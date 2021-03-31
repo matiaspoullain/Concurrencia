@@ -5,8 +5,8 @@ account: matiaspoullain
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3743940
-bundleId: 4306797
+bundleId: 4417382
 url: https://matiaspoullain.shinyapps.io/Concurrencias_movilidad/
-when: 1614981193.65441
+when: 1617220254.75684
 asMultiple: FALSE
 asStatic: FALSE
