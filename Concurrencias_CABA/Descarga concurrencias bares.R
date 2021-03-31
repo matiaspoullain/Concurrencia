@@ -45,3 +45,6 @@ git2r::add(repo = ".", path = getwd(), force = FALSE)
 git2r::commit(repo = ".", message = "datos bares", all = TRUE)
 shell("git push")
 
+
+
+#Hay lugares que no descargaron bien las coordenadas
